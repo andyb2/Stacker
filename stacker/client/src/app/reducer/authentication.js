@@ -1,18 +1,16 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
-const initialState = {}
+const initialState = {};
 
 export const tokenSlice = createSlice({
     name: 'token',
     initialState,
     reducers: {
         setToken: ( state, action ) => {
-            console.log(action)
             localStorage.setItem('spotify_token', action.payload);
             state.active = true
         },
         logout: ( state, action ) => {
-            console.log(`YES`, state)
             localStorage.removeItem('spotify_token');
             state.active = false
         }

@@ -4,7 +4,6 @@ const Logout = () => {
     const dispatch = useDispatch();
 
     const handeLogout = () => {
-        console.log(`yes`)
         dispatch(logout());
     }
 

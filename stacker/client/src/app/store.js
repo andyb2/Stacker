@@ -1,13 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import tokenSlice from './reducer/authentication';
-// import thunk from 'redux-thunk';
-// import thunk from 'redux-thunk';
-// import authentication from './reducer/authentication';
+import spotifySlice from './reducer/spotify';
 
 export const store = configureStore({
   reducer: {
     token: tokenSlice,
-  },
-  // middleware: [thunk]
+    spotify: spotifySlice,
+  }
 });
 

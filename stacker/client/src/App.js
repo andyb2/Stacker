@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import Home from './pages/Home.jsx'
+import Home from './pages/Home.jsx';
+import './App.css';
 import { setToken } from './app/reducer/authentication';
 import SignInPage from './components/SignInPage';
 import { getParam } from './utils';

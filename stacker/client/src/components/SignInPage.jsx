@@ -1,8 +1,13 @@
+import spotify from '../logos/spotify.png'
+import './SignInPage.css'
 const SignInPage = () => {
     const LOGIN = 'http://localhost:8888/spotify/login';
     return (
-        <div className='btn-sign-in'>
-            <a href={LOGIN}>Login to Spotify</a>
+        <div className='sign-in'>
+            <div className='spotify-login'>
+            <img src={spotify} className='spotify-logo'></img>
+            <a href={LOGIN} className='btn-login btn-ref'>Login</a>
+            </div>
         </div>
     )
 }
