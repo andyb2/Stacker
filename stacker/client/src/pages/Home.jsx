@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import Logout from "../components/Logout";
 import User from "../components/User";
 import Following from "../components/Following";
-import './Home.css'
+import '../components/styles/Home.css';
+import Sidebar from "../components/sidebar/Siderbar";
 const Home = () => {
     const [ userFollowingActive, setUserFollowingActive ] = useState(false);
     return (
-        <div>
-            { ( !userFollowingActive && <User setUserFollowingActive={setUserFollowingActive}/> ) || <Following userFollowingActive={userFollowingActive} /> }
-            {/* <Logout /> */}
+        <>
+        <Sidebar />
+        <div style={{display: 'flex', justifyContent: 'end', width: '100%'}}>
+            <div className='main'>
+                { ( !userFollowingActive && <User setUserFollowingActive={setUserFollowingActive}/> ) || <Following userFollowingActive={userFollowingActive} /> }
+            </div>
         </div>
+        </>
     )
 }
 

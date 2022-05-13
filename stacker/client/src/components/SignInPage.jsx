@@ -1,5 +1,5 @@
 import spotify from '../logos/spotify.png'
-import './SignInPage.css'
+import './styles/SignInPage.css'
 const SignInPage = () => {
     const LOGIN = 'http://localhost:8888/spotify/login';
     return (
