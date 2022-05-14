@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import './styles/User.css'
 import { useSelector, useDispatch } from "react-redux";
-import { userDataRequest, userGetFollowing } from "../app/thunk";
+import { userDataRequest, userGetFollowing, getRecentlyPlayed } from "../app/thunk";
 
 const User = ({ setUserFollowingActive }) => {
     const { user, following } = useSelector((state) => state.spotify);
@@ -15,6 +15,7 @@ const User = ({ setUserFollowingActive }) => {
         const getUsersData = () => {
             dispatch(userDataRequest());
             dispatch(userGetFollowing());
+            dispatch(getRecentlyPlayed());
         }
         getUsersData();
     }, [])
@@ -35,7 +36,7 @@ const User = ({ setUserFollowingActive }) => {
                                 <div style={{color: 'grey', fontSize: '15px'}}>FOLLOWING</div>
                             </div>
                         </div>
-                        <div className='margin-top' style={{color: '#1DB954'}}>{user.product}</div>
+                        {/* <div className='margin-top' style={{color: '#1DB954'}}>{user.product}</div> */}
                     </div>
             }
         </>

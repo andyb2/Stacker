@@ -9,20 +9,17 @@
 .user-profile-image {
     height: 150px;
     border-radius: 100px;
-    /* padding: 1rem; */
 }
 
 .user-profile-name {
     margin: 0;
     font-size: 45px;
-    /* padding: 0.5rem;  */
     color: white;
 }
 
 .user-follow {
     display: flex;
     gap: 5rem;
-    /* padding: 0.5rem; */
 }
 
 .follow-container {

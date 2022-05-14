@@ -5,14 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic, faMicrophoneLines,faClockRotateLeft, faUser, faBarsStaggered} from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
-
     return (
         <div className="sidebar">
-            <div style={{paddingTop: '1rem', paddingBottom: '1rem'}}>
+            <div style={{cursor: 'pointer', paddingTop: '1rem', paddingBottom: '1rem'}}>
                 <SpotifyLogo />
             </div>
-            <div className='test' style={{border: '1px solid red', display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center'}}>
-                <div style={{border: '1px solid white', display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center'}}>   
+            <div className='nav-buttons' style={{gap: '0.5rem', display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center'}}>
+                {/* <div className="test2" style={{gap: '1rem', display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center'}}>    */}
                     <div className='icon-holder'>
                         <FontAwesomeIcon icon={faUser} size={'xl'} color={'grey'} />
                         <p className='sidebar-titles'>Profile</p>
@@ -34,7 +33,7 @@ const Sidebar = () => {
                         <p className='sidebar-titles'>Playlist</p>
                     </div>
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     )
 }

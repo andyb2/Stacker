@@ -1,8 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
 import { getParam } from "../utils";
-import { getUser, getFollowing } from "./reducer/spotify";
+import { getUser, getFollowing, getRecent } from "./reducer/spotify";
 import { user, following } from "../endpointResponses";
+import { createCacheKeyComparator } from "reselect/es/defaultMemoize";
 
 const { access_token } = getParam();
 
@@ -34,6 +35,19 @@ export const userGetFollowing = createAsyncThunk(
             console.log(`[FOLLOWING]`, data)
             thunkAPI.dispatch(getFollowing(data));
         } catch (error) {
+            console.error(error);
+        }
+    }
+)
+
+export const getRecentlyPlayed = createAsyncThunk(
+    'spotify/getRecent',
+    async (placeholder, thunkAPI) => {
+        try {
+            const { data } = await axios.get('https://api.spotify.com/v1/me/player/recently-played', {headers} );
+            console.log(`[RECENT]`, data)
+            thunkAPI.dispatch(getRecent(data));
+        } catch(error) {
             console.error(error);
         }
     }

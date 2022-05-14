@@ -2,7 +2,6 @@ import { useSelector } from "react-redux"
 
 const Following = ({ userFollowingActive }) => {
     const artists = useSelector((state) => state.spotify.following.artists);
-    // console.log(`ART`, state.following.artists.items[0].images[0].url)
     return (
         <div>
             { userFollowingActive && artists.items.map((user, idx) => {
