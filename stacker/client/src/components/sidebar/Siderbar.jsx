@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 import SpotifyLogo from '../../logos/spotify-logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,29 +12,31 @@ const Sidebar = () => {
                 <SpotifyLogo />
             </div>
             <div className='nav-buttons' style={{gap: '0.5rem', display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center'}}>
-                {/* <div className="test2" style={{gap: '1rem', display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center'}}>    */}
+                <NavLink to='/' style={{textDecoration: 'none'}}>
                     <div className='icon-holder'>
                         <FontAwesomeIcon icon={faUser} size={'xl'} color={'grey'} />
                         <p className='sidebar-titles'>Profile</p>
                     </div>
+                </NavLink>
+                <NavLink to='/topArtist' style={{textDecoration: 'none'}}>
                     <div className='icon-holder'>
                         <FontAwesomeIcon icon={faMusic} size={'xl'} color={'grey'} />
                         <p className='sidebar-titles'>Top Artists</p>
                     </div>
-                    <div className='icon-holder'>
-                        <FontAwesomeIcon icon={faMicrophoneLines} size={'xl'} color={'grey'} />
-                        <p className='sidebar-titles'>Top Songs</p>
-                    </div>
-                    <div className='icon-holder'>
-                        <FontAwesomeIcon icon={faClockRotateLeft} size={'xl'} color={'grey'} />
-                        <p className='sidebar-titles'>Recent</p>
-                    </div>
-                    <div className='icon-holder'>
-                        <FontAwesomeIcon icon={faBarsStaggered} size={'xl'} color={'grey'} />
-                        <p className='sidebar-titles'>Playlist</p>
-                    </div>
+                </NavLink>
+                <div className='icon-holder'>
+                    <FontAwesomeIcon icon={faMicrophoneLines} size={'xl'} color={'grey'} />
+                    <p className='sidebar-titles'>Top Songs</p>
                 </div>
-            {/* </div> */}
+                <div className='icon-holder'>
+                    <FontAwesomeIcon icon={faClockRotateLeft} size={'xl'} color={'grey'} />
+                    <p className='sidebar-titles'>Recent</p>
+                </div>
+                <div className='icon-holder'>
+                    <FontAwesomeIcon icon={faBarsStaggered} size={'xl'} color={'grey'} />
+                    <p className='sidebar-titles'>Playlist</p>
+                </div>
+            </div>
         </div>
     )
 }

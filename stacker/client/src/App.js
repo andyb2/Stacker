@@ -5,6 +5,7 @@ import { setToken } from './app/reducer/authentication';
 import SignInPage from './components/SignInPage';
 import { getParam } from './utils';
 import { useSelector, useDispatch } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const App = () => {
   const auth = useSelector((state) => state.token.active);
@@ -23,7 +24,12 @@ const App = () => {
 
   return (
     <div className="App">
-      { ( auth && <Home /> ) || <SignInPage /> }
+      { 
+        ( auth &&
+          <Router>
+            <Home auth={auth}/>
+          </ Router> ) || <SignInPage /> 
+      }
     </div>
   );
 }
