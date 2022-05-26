@@ -24,10 +24,12 @@ const Sidebar = () => {
                         <p className='sidebar-titles'>Top Artists</p>
                     </div>
                 </NavLink>
-                <div className='icon-holder'>
-                    <FontAwesomeIcon icon={faMicrophoneLines} size={'xl'} color={'grey'} />
-                    <p className='sidebar-titles'>Top Songs</p>
-                </div>
+                <NavLink to='topSongs' style={{textDecoration: 'none'}}>
+                    <div className='icon-holder'>
+                        <FontAwesomeIcon icon={faMicrophoneLines} size={'xl'} color={'grey'} />
+                        <p className='sidebar-titles'>Top Songs</p>
+                    </div>
+                </NavLink>
                 <div className='icon-holder'>
                     <FontAwesomeIcon icon={faClockRotateLeft} size={'xl'} color={'grey'} />
                     <p className='sidebar-titles'>Recent</p>

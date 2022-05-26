@@ -19,11 +19,14 @@ export const spotifySlice = createSlice({
             state.recent = action.payload;
         },
         getTopArtist: (state, action) => {
-            state.topArtist = action.payload
+            state.topArtist = action.payload;
+        },
+        getTopSongs: (state, action) => {
+            state.topSongs = action.payload;
         }
     }
 });
 
 export const { actions } = spotifySlice;
-export const { getUser, getFollowing, getFollowers, getRecent, getTopArtist } = actions;
+export const { getUser, getFollowing, getFollowers, getRecent, getTopArtist, getTopSongs } = actions;
 export default spotifySlice.reducer;
