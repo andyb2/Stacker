@@ -1,19 +1,33 @@
-.top-artist-conatiner:after {
+.top-artist-conatiner {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-main:after {
     content: '';
     width: 150px;
     padding: 1rem;
 }
 
-.top-artist-conatiner {
+.header-top-artist {
+    color: white;
+}
+
+.artist-main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 1rem;
 }
 
 .artist-card:hover {
     border-radius: 2px;
     background-color: rgb(38, 38, 38);
+}
+
+.header-top-artist {
+    padding: 0 1rem 0 1rem;
+    margin: 0;
 }
 
 .artist-name {
