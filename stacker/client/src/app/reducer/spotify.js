@@ -23,10 +23,13 @@ export const spotifySlice = createSlice({
         },
         getTopSongs: (state, action) => {
             state.topSongs = action.payload;
+        },
+        getPlaylist: (state, action) => {
+            state.playlists = action.payload;
         }
     }
 });
 
 export const { actions } = spotifySlice;
-export const { getUser, getFollowing, getFollowers, getRecent, getTopArtist, getTopSongs } = actions;
+export const { getUser, getFollowing, getFollowers, getRecent, getTopArtist, getTopSongs, getPlaylist } = actions;
 export default spotifySlice.reducer;
