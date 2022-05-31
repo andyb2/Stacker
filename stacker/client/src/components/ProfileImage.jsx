@@ -38,7 +38,7 @@ const ProfileImage = ( {username} ) => {
 
     return (
         <div style={imageProperties.styling}>
-            <p styling={{color: 'white'}}> {imageProperties.letter} </p>
+            <p> {imageProperties.letter} </p>
         </div>
     )
 }
