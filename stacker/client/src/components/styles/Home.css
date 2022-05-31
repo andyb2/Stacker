@@ -16,16 +16,6 @@ body {
     grid-template-rows: 100vh;
 }
 
-/* .main::before {
-    content: '';
-    position: absolute;
-    z-index: -100;
-    bottom: 0;
-    background: linear-gradient(to top, transparent, #191414,#191414, rgb(127, 0, 0));
-    height: 100%;
-    width: 100%;
-} */
-
 .main {
     position: relative;
     display: flex;
