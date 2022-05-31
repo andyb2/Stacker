@@ -10,6 +10,17 @@ const backgroundColor = {
     orange: 'orange',
 }
 
+const style = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '150px',
+    width: '150px',
+    borderRadius: '100px',
+    fontSize: '75px',
+    color: 'white',
+}
+
 const ProfileImage = ( {username} ) => {
     const [ imageProperties, setImageProperties ] = useState({});
 
@@ -17,19 +28,10 @@ const ProfileImage = ( {username} ) => {
         const generateProfileImage = () => {
             const background = Object.keys(backgroundColor)[Math.floor(Math.random() * 6)];
             const firstLetterOfUsername = username[0].toUpperCase();
+            style.backgroundColor = background;
             const properties = {
                 letter: firstLetterOfUsername,
-                styling: { 
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: background,
-                    height: '150px',
-                    width: '150px',
-                    borderRadius: '100px',
-                    fontSize: '75px',
-                    color: 'white',
-                }
+                styling: style,
             };
             setImageProperties(properties);
         }
