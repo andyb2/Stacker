@@ -39,6 +39,12 @@
     margin: 0;
 }
 
+.artist-image {
+    height: 150px;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+
 .artist-name {
     width: 100%;
     display: flex;
