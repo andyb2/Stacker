@@ -3,12 +3,13 @@ import { useDispatch } from "react-redux";
 import User from "../components/User";
 import Following from "../components/Following";
 import '../components/styles/Home.css';
-import Sidebar from "../components/sidebar/Siderbar";
+import Sidebar from "../components/sidebar/Sidebar";
 import RecentlyPlayed from "../components/RecentlyPlayed";
 import UsersTopArtist from "../components/UsersTopArtist";
-import { userDataRequest, userGetFollowing, getRecentlyPlayed, getUserTopArtists, getUserTopSongs } from "../app/thunk";
+import { userDataRequest, userGetFollowing, getRecentlyPlayed, getUserTopArtists, getUserTopSongs, getUserPlaylists } from "../app/thunk";
 import { Routes, Route } from "react-router-dom";
 import UsersTopSongs from "../components/UsersTopSongs";
+import Playlist from "../components/Playlist";
 
 const Home = ({ auth }) => {
     const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const Home = ({ auth }) => {
             dispatch(getRecentlyPlayed());
             dispatch(getUserTopArtists());
             dispatch(getUserTopSongs());
+            dispatch(getUserPlaylists());
         }
         getUsersData();
     }, [auth]);
@@ -34,6 +36,7 @@ const Home = ({ auth }) => {
                             <Route exact path="/following" element={<Following />} />
                             <Route exact path="/topArtist" element={<UsersTopArtist />} />
                             <Route exact path="/topSongs" element={<UsersTopSongs />} />
+                            <Route exact path="/playlists" element={<Playlist />} />
                         </Routes>
                 </div>
             {/* </div> */}
