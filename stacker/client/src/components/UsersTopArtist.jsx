@@ -10,7 +10,7 @@ const UsersTopArtist = () => {
                 { topArtists && 
                     topArtists.items.map((artist) => {
                         return (
-                            <a style={{textDecoration: 'none'}} href={artist.external_urls.spotify} target="_blank" rel="noreferrer">
+                            <a href={artist.external_urls.spotify} target="_blank" rel="noreferrer">
                                 <div className="artist-card" style={{padding: '1rem', maxWidth: '150px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                                         <img src={`${artist.images[0].url}`} alt="album cover" style={{height: '150px', marginBottom: '1rem', borderRadius: '2px'}}/>
                                         <div className="artist-name">{artist.name}</div>
