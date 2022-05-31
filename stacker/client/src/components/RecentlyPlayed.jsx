@@ -1,6 +1,6 @@
 import './styles/RecentlyPlayed.css';
 import { useSelector } from "react-redux";
-import { converMStoMinutes } from '../utils';
+import { convertMStoMinutes } from '../utils';
 
 const RecentlyPLayed = () => {
     const recent = useSelector((state) => state.spotify.recent);
@@ -22,7 +22,7 @@ const RecentlyPLayed = () => {
                                 </div>
                             </div>
                             <div style={{display: 'flex', alignItems: 'center', paddingRight: '0.5rem'}}>
-                                <div style={{color: 'grey', fontSize: '16px'}}>{converMStoMinutes(songs.track.duration_ms)}</div>
+                                <div style={{color: 'grey', fontSize: '16px'}}>{convertMStoMinutes(songs.track.duration_ms)}</div>
                             </div>
                         </div>
                     )
