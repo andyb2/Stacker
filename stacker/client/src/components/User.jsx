@@ -4,12 +4,8 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileImage from "./ProfileImage";
 
-const User = ({ setUserFollowingActive }) => {
+const User = () => {
     const { user, following } = useSelector((state) => state.spotify);
- 
-    // const renderFollowers = () => {
-    //     setUserFollowingActive(prev => !prev)
-    // }
 
     return (
         <>
