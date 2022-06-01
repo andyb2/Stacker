@@ -12,8 +12,8 @@ const UsersTopArtist = () => {
                         return (
                             <a href={artist.external_urls.spotify} target="_blank" rel="noreferrer">
                                 <div className="artist-card">
-                                        <img src={`${artist.images[0].url}`} className="artist-image" alt="album cover" />
-                                        <div className="artist-name">{artist.name}</div>
+                                    <img src={`${artist.images[0].url}`} className="artist-image" alt="album cover" />
+                                    <div className="artist-name">{artist.name}</div>
                                 </div>
                             </a>
                         )
