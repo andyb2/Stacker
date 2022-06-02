@@ -29,7 +29,6 @@ const Home = ({ auth }) => {
     return (
         <div className="home-grid">
             <Sidebar />
-            {/* <div style={{display: 'flex', justifyContent: 'end', width: '100%'}}> */}
                 <div className='main'>
                         <Routes>
                             <Route exact path="/" element={<><User /><RecentlyPlayed /></>} />
@@ -39,7 +38,6 @@ const Home = ({ auth }) => {
                             <Route exact path="/playlists" element={<Playlist />} />
                         </Routes>
                 </div>
-            {/* </div> */}
         </div>
     )
 }
