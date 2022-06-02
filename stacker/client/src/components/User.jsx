@@ -15,7 +15,7 @@ const User = () => {
                         { 
                             user.images.length 
                                 ? <img className='user-profile-image' src={`${user.images[0].url}`} alt="users spotify profile"/> 
-                                : <ProfileImage username={user.display_name}/>
+                                : <ProfileImage username={user.display_name}  br={'100px'} h={'150px'} f={'75px'}/>
                         }
                         <h1 className='user-profile-name margin-top'>{user.display_name}</h1>
                         <div className='user-follow margin-top'>
