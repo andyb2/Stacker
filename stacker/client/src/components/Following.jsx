@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux"
+import ProfileImage from "./ProfileImage";
 
 const Following = () => {
     const artists = useSelector((state) => state.spotify.following.artists);
-    
+
     return (
         <div>
             { artists
@@ -12,7 +13,7 @@ const Following = () => {
                             { 
                                 user.images.length 
                                     ? <img src={`${user.images[0].url}`} alt='artists profile' style={{height: '150px'}}></img> 
-                                    : "0" 
+                                    : <ProfileImage username={user.name} br={'2px'} h={'150px'} />
                             }
                             <div>{user.name}</div>
                             <div>{`followers ${user.followers.total}`}</div>
