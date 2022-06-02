@@ -28,6 +28,14 @@
     align-items: center;
 }
 
+.following-total {
+    text-align: center;
+}
+
+.following-size {
+    font-size: 16px;
+}
+
 .margin-top {
     margin-top: 1rem;
 }
