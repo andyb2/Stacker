@@ -5,11 +5,9 @@ import { convertMStoMinutes } from '../utils';
 const RecentlyPLayed = () => {
     const recent = useSelector((state) => state.spotify.recent);
     
-    
-
     return (
         <div className='recent-container'>
-            <h1 style={{color: 'white'}}>Recently Played</h1>
+            <h1 className='spotify-color-white'>Recently Played</h1>
             { recent && 
                 recent.items.map(({ track }, idx) => {
                     return (
