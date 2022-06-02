@@ -8,12 +8,12 @@ const UsersTopArtist = () => {
                 <h1 className="header-top-artist">Top Artists</h1>
                 <div className="artist-main">
                 { topArtists && 
-                    topArtists.items.map((artist) => {
+                    topArtists.items.map(({ external_urls, images, name }) => {
                         return (
-                            <a href={artist.external_urls.spotify} target="_blank" rel="noreferrer">
+                            <a href={external_urls.spotify} target="_blank" rel="noreferrer">
                                 <div className="artist-card">
-                                    <img src={`${artist.images[0].url}`} className="artist-image" alt="album cover" />
-                                    <div className="artist-name">{artist.name}</div>
+                                    <img src={`${images[0].url}`} className="artist-image" alt="album cover" />
+                                    <div className="artist-name">{name}</div>
                                 </div>
                             </a>
                         )
