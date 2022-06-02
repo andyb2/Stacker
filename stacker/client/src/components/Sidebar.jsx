@@ -8,7 +8,7 @@ import { faMusic, faMicrophoneLines,faClockRotateLeft, faUser, faBarsStaggered} 
 const Sidebar = () => {
     return (
         <div className="sidebar">
-            <div style={{cursor: 'pointer', paddingTop: '1rem', paddingBottom: '1rem'}}>
+            <div className='sidebar-spotify-logo'>
                 <SpotifyLogo />
             </div>
             <div className='nav-buttons' style={{gap: '0.5rem', display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center'}}>
