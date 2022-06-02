@@ -10,31 +10,32 @@ const backgroundColor = {
     orange: 'orange',
 }
 
-const ProfileImage = ( {username} ) => {
+const ProfileImage = ( {username, br, h, f} ) => {
     const [ imageProperties, setImageProperties ] = useState({});
+    const style = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: h ? h : '20px',
+        width: h ? h : '20px',
+        borderRadius: br ? br : '0px',
+        fontSize: f ? f : '75px',
+        color: 'white',
+    };
 
     useEffect(() => {
         const generateProfileImage = () => {
             const background = Object.keys(backgroundColor)[Math.floor(Math.random() * 6)];
+            style.backgroundColor = background;
             const firstLetterOfUsername = username[0].toUpperCase();
             const properties = {
                 letter: firstLetterOfUsername,
-                styling: {
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: background,
-                    height: '150px',
-                    width: '150px',
-                    borderRadius: '100px',
-                    fontSize: '75px',
-                    color: 'white',
-                }
+                styling: style,
             };
             setImageProperties(properties);
         }
         generateProfileImage();
-    }, [username]);
+    }, [username, br, h, f]);
 
     return (
         <div style={imageProperties.styling}>
