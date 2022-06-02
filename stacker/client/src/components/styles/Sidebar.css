@@ -28,11 +28,16 @@
 }
 
 .spotify-svg {
-    display:block;
+    display: block;
     height: 50px;
     width: 50px;
 }
 
 .nav-buttons {
     height: calc(100% - 166px);
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
