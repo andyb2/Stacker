@@ -1,5 +1,5 @@
 import React from "react";
-import './styles/User.css'
+import './styles/User.css';
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileImage from "./ProfileImage";
@@ -20,13 +20,13 @@ const User = () => {
                         <h1 className='user-profile-name margin-top'>{user.display_name}</h1>
                         <div className='user-follow margin-top'>
                             <div className='follow-container'>
-                                <div style={{color: '#1DB954'}}>{user.followers.total}</div>
-                                <div style={{color: 'grey', fontSize: '15px'}}>FOLLOWERS</div>
+                                <div className='spotify-color-green'>{user.followers.total}</div>
+                                <div className='follow-size color-grey'>FOLLOWERS</div>
                             </div>
                             <div className='follow-container'>
                                 <NavLink to='/following' style={{textDecoration: 'none'}}>
-                                    <div style={{color: '#1DB954', textAlign: 'center'}}>{following && following.artists.total}</div>
-                                    <div style={{color: 'grey', fontSize: '15px'}}>FOLLOWING</div>
+                                    <div className='following-total spotify-color-green'>{following && following.artists.total}</div>
+                                    <div className='follow-size color-grey'>FOLLOWING</div>
                                 </NavLink>
                             </div>
                         </div>
