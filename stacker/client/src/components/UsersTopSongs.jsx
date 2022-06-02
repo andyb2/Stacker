@@ -8,8 +8,7 @@ const UsersTopSongs = () => {
     return (
         <div className="songs-parent">
             <h1 className="header-top-songs">Top Songs</h1>
-            <div className="songs-container">
-                
+            <div className="songs-container">          
                 { topSongs &&
                     topSongs.items.map(({ id, album, name, artists, duration_ms }) => {
                         return (    
