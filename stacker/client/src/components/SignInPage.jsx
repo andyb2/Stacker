@@ -2,6 +2,7 @@ import spotify from '../logos/spotify.png'
 import './styles/SignInPage.css'
 const SignInPage = () => {
     const LOGIN = 'http://localhost:8888/spotify/login';
+    
     return (
         <div className='sign-in'>
             <div className='spotify-login'>
