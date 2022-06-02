@@ -2,6 +2,7 @@ import { useSelector } from "react-redux"
 
 const Following = () => {
     const artists = useSelector((state) => state.spotify.following.artists);
+    
     return (
         <div>
             { artists
