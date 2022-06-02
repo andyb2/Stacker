@@ -11,6 +11,12 @@
     background-color: black;
 }
 
+.sidebar-spotify-logo {
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 .sidebar-titles {
     font-size: 12px;
     color: grey;
