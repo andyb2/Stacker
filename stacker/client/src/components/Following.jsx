@@ -7,16 +7,16 @@ const Following = () => {
     return (
         <div>
             { artists
-                 && artists.items.map((user, idx) => {
+                 && artists.items.map(({ name, images, followers }, idx) => {
                     return (
-                        <div className='spotify-color-white' key={`${user.name} ${idx}`}>
+                        <div className='spotify-color-white' key={`${name} ${idx}`}>
                             { 
-                                user.images.length 
-                                    ? <img src={`${user.images[0].url}`} alt='artists profile' style={{height: '150px'}}></img> 
-                                    : <ProfileImage username={user.name} br={'2px'} h={'150px'} />
+                                images.length 
+                                    ? <img src={`${images[0].url}`} alt='artists profile' style={{height: '150px'}} /> 
+                                    : <ProfileImage username={name} br={'2px'} h={'150px'} />
                             }
-                            <div>{user.name}</div>
-                            <div>{`followers ${user.followers.total}`}</div>
+                            <div>{name}</div>
+                            <div>{`followers ${followers.total}`}</div>
                         </div>
                     )
                 })
