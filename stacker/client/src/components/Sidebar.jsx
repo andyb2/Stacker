@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Sidebar.css';
+import './styles/Sidebar.css';
 import SpotifyLogo from '../logos/spotify-logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic, faMicrophoneLines,faClockRotateLeft, faUser, faBarsStaggered} from '@fortawesome/free-solid-svg-icons';
