@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import User from "../components/User";
 import Following from "../components/Following";
 import '../components/styles/Home.css';
-import Sidebar from "../components/sidebar/Sidebar";
+import Sidebar from "../components/Sidebar";
 import RecentlyPlayed from "../components/RecentlyPlayed";
 import UsersTopArtist from "../components/UsersTopArtist";
 import { userDataRequest, userGetFollowing, getRecentlyPlayed, getUserTopArtists, getUserTopSongs, getUserPlaylists } from "../app/thunk";
