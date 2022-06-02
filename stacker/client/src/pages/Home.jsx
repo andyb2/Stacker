@@ -6,7 +6,12 @@ import '../components/styles/Home.css';
 import Sidebar from "../components/Sidebar";
 import RecentlyPlayed from "../components/RecentlyPlayed";
 import UsersTopArtist from "../components/UsersTopArtist";
-import { userDataRequest, userGetFollowing, getRecentlyPlayed, getUserTopArtists, getUserTopSongs, getUserPlaylists } from "../app/thunk";
+import { userDataRequest,
+         userGetFollowing,
+         getRecentlyPlayed,
+         getUserTopArtists,
+         getUserTopSongs, 
+         getUserPlaylists } from "../app/thunk";
 import { Routes, Route } from "react-router-dom";
 import UsersTopSongs from "../components/UsersTopSongs";
 import Playlist from "../components/Playlist";
