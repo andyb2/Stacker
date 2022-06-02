@@ -11,7 +11,7 @@ const UsersTopSongs = () => {
             <div className="songs-container">
                 
                 { topSongs &&
-                    topSongs.items.map(({id, album, name, artists, duration_ms}) => {
+                    topSongs.items.map(({ id, album, name, artists, duration_ms }) => {
                         return (    
                             <div className="song-row" key={`${id}`}>
                                 <div className="song-block">
