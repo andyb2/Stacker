@@ -11,7 +11,7 @@ const Sidebar = () => {
             <div className='sidebar-spotify-logo'>
                 <SpotifyLogo />
             </div>
-            <div className='nav-buttons' style={{gap: '0.5rem', display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center'}}>
+            <div className='nav-buttons'>
                 <NavLink to='/' style={{textDecoration: 'none'}}>
                     <div className='icon-holder'>
                         <FontAwesomeIcon icon={faUser} size={'xl'} color={'grey'} />
