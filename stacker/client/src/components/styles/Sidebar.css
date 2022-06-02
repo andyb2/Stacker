@@ -41,3 +41,7 @@
     justify-content: center; 
     align-items: center;
 }
+
+.nav-style {
+    text-decoration: none;
+}
