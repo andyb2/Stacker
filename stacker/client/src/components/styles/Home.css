@@ -14,6 +14,18 @@ a {
     text-decoration: none;
 }
 
+.spotify-color-green {
+    color: #1DB954;
+}
+
+.spotify-color-white {
+    color: #FFFFFF
+}
+
+.color-grey {
+    color: #DEDEDE;
+}
+
 .home-grid {
     display: grid;
     grid-template-columns: 100px 1fr;
