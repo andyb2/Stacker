@@ -2,20 +2,31 @@
     display: flex; 
     flex-direction: column;
     align-items: center;
+    /* justify-content: space-between; */
     width: 100px;
     background-color: black;
+    flex-shrink: 0;
 }
 
+/* @media (max-width: 796px) {
+    background-color: red;   
+} */
+
 .sidebar-spotify-logo {
+    display: flex;
+    justify-content: center;
     cursor: pointer;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    width: 100%;
+    /* min-height: 100px; */
 }
 
 .sidebar-titles {
     font-size: 12px;
     color: grey;
-    gap: 3rem;
+    /* gap: 3rem; */
+    padding-top: 0.5rem;
 }
 
 .icon-holder {
@@ -25,6 +36,7 @@
     align-items: center;
     text-align: center;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
 .spotify-svg {
@@ -34,8 +46,9 @@
 }
 
 .nav-buttons {
+    width: 100%;
     height: calc(100% - 166px);
-    gap: 0.5rem;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -44,4 +57,9 @@
 
 .nav-style {
     text-decoration: none;
+    width: 100%;
+}
+
+.nav-active {
+    background-color: #2d2d2d;
 }
