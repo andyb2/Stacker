@@ -10,7 +10,7 @@ const backgroundColor = {
     orange: 'orange',
 }
 
-const ProfileImage = ( {username, br, h, f} ) => {
+const ProfileImage = ({ username, br, h, f }) => {
     const [ imageProperties, setImageProperties ] = useState({});
     const style = {
         display: 'flex',
