@@ -2,15 +2,17 @@
     display: flex; 
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-between; */
     width: 100px;
     background-color: black;
     flex-shrink: 0;
 }
 
-/* @media (max-width: 796px) {
-    background-color: red;   
-} */
+@media (max-width: 796px) {
+    .sidebar {
+        flex-direction: row;
+        width: 100%;
+    }
+}
 
 .sidebar-spotify-logo {
     display: flex;

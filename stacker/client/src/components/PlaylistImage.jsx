@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
-import './Playlist.css';
+import './styles/Playlist.css';
 
 const PlaylistImage = () => {
     return (
