@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux"
 import ProfileImage from "./ProfileImage";
-
+import './styles/Following.css';
 const Following = () => {
     const artists = useSelector((state) => state.spotify.following.artists);
 
     return (
-        <div>
+        <div className="following-container">
             { artists
                  && artists.items.map(({ name, images, followers }, idx) => {
                     return (
