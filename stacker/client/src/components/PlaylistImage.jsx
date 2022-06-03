@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import './Playlist.css';
 
 const PlaylistImage = () => {
     return (
         <div>
-            <FontAwesomeIcon icon={faMusic} size={'xl'} height={'150px'} color={'grey'} />
+            <FontAwesomeIcon className='playlist-image' icon={faMusic} size={'xl'} color={'grey'} />
         </div>
     )
 }
