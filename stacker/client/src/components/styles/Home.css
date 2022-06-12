@@ -3,19 +3,54 @@ html, body {
     height: 100%;
 }
 
+:root {
+    --height-150: 150px;
+    --height-125: 125px;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
-    background-color: #181818;
+    background: #191414;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.spotify-color-green {
+    color: #1DB954;
+}
+
+.spotify-color-white {
+    color: #FFFFFF
+}
+
+.color-grey {
+    color: #DEDEDE;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100vh;
+}
+
+/* @media (max-width: 796px) {
+    
+} */
+
 .main {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 2rem;
-    width: calc(100% - 168px);
     gap: 2rem;
+    overflow-y: overlay;
 }

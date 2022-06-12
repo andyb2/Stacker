@@ -1,25 +1,26 @@
 import { useSelector } from "react-redux";
-
+import './styles/UsersTopArtist.css';
 const UsersTopArtist = () => {
-    const topArtists = useSelector(state => state.spotify.topArtist)
-    console.log(topArtists)
+    const topArtists = useSelector(state => state.spotify.topArtist);
+
     return (
-        <div style={{height: '100%', display: 'flex'}}>
-            { topArtists && 
-                topArtists.items.map((artist) => {
-                    return (
-                        <div style={{maxWidth: '150px', maxHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                            <img src={`${artist.images[0].url}`} style={{height: '150px', borderRadius: '100px'}}/>
-                            <p style={{color: 'white'}}>{artist.name}</p>
-                            <div style={{color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                                <p>Followers</p>
-                                <p>{artist.followers.total}</p>
-                            </div>
-                        </div>
-                    )
-                })
-            }
-        </div>
+            <div className="top-artist-conatiner">
+                <h1 className="header-top-artist">Top Artists</h1>
+                <div className="artist-main">
+                { topArtists && 
+                    topArtists.items.map(({ external_urls, images, name, id }, idx) => {
+                        return (
+                            <a key={`${id}${idx}`} href={external_urls.spotify} target="_blank" rel="noreferrer">
+                                <div className="artist-card">
+                                    <img src={`${images[0].url}`} className="artist-image" alt="album cover" />
+                                    <div className="artist-name">{name}</div>
+                                </div>
+                            </a>
+                        )
+                    })
+                }
+                </div>
+            </div>
     )
 }
 

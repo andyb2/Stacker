@@ -1,16 +1,22 @@
 import { useSelector } from "react-redux"
-
+import ProfileImage from "./ProfileImage";
+import './styles/Following.css';
 const Following = () => {
     const artists = useSelector((state) => state.spotify.following.artists);
+
     return (
-        <div>
+        <div className="following-container">
             { artists
-                 && artists.items.map((user, idx) => {
+                 && artists.items.map(({ name, images, followers }, idx) => {
                     return (
-                        <div style={{color: 'white'}} key={`${user.name} ${idx}`}>
-                        { user.images.length ? <img src={`${user.images[0].url}`} alt='artists profile' style={{height: '150px'}}></img> : "none" }
-                            <div style={{color: 'white'}}>{user.name}</div>
-                            <div style={{color: 'white'}}>{`followers ${user.followers.total}`}</div>
+                        <div className='spotify-color-white' key={`${name} ${idx}`}>
+                            { 
+                                images.length 
+                                    ? <img src={`${images[0].url}`} alt='artists profile' style={{height: '150px'}} /> 
+                                    : <ProfileImage username={name} br={'2px'} h={'150px'} />
+                            }
+                            <div>{name}</div>
+                            <div>{`followers ${followers.total}`}</div>
                         </div>
                     )
                 })

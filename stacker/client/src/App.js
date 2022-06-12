@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Home from './pages/Home.jsx';
 import './App.css';
-import { setToken } from './app/reducer/authentication';
+import { setToken, isAuth } from './app/reducer/authentication';
 import SignInPage from './components/SignInPage';
 import { getParam } from './utils';
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,7 +19,15 @@ const App = () => {
   }
 
   useEffect(()=> {
-    setTokenAccess();
+    // const checkForTokenAccess = () => {
+    //   dispatch(isAuth());
+    // }
+    // checkForTokenAccess();
+    // if (!auth) {
+      setTokenAccess();
+    // } else {
+    //   setTokenAccess();
+    // }
   }, [])
 
   return (
