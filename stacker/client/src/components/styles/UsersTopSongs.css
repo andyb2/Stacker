@@ -1,17 +1,15 @@
-.songs-parent {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 700px;
-    color: white;
-}
-
 .songs-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 700px;
+    max-width: 1920px;
     color: white;
+}
+
+.songs-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .song-row {
@@ -19,6 +17,7 @@
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .song-block {

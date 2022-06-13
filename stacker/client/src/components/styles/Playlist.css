@@ -2,16 +2,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 1920px;
 }
 
 .playlist-main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-}
-
-.playlist-header {
-    padding-left: 1rem;
+    gap: 2rem;
 }
 
 .playlist-image {
@@ -19,7 +16,7 @@
     width: var(--height-150);
 }
 
-@media (max-width: 796px) {
+@media (max-width: 912px) {
     .playlist-image {
         height: var(--height-125);
         width: var(--height-125);
@@ -39,4 +36,5 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
 }

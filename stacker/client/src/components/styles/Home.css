@@ -11,8 +11,12 @@ html, body {
 body {
     box-sizing: border-box;
     margin: 0;
-    background: #191414;
+    background: #131212;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: white;
 }
 
 p {
@@ -39,13 +43,11 @@ a {
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-template-rows: 100vh;
+    grid-template-areas: 'sidebar main';
 }
 
-/* @media (max-width: 796px) {
-    
-} */
-
 .main {
+    grid-area: main;
     position: relative;
     display: flex;
     align-items: center;
@@ -53,4 +55,16 @@ a {
     padding: 2rem;
     gap: 2rem;
     overflow-y: overlay;
+}
+/* 768px */
+@media (max-width: 912px) {
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: calc(100vh - 80px) 80px;
+        grid-template-areas: 'main main'
+                             'sidebar sidebar';
+    }
+    .main {
+        padding: 0.5rem;
+    }
 }

@@ -10,21 +10,21 @@ import { BrowserRouter as Router } from 'react-router-dom';
 const App = () => {
   const auth = useSelector((state) => state.token.active);
   const dispatch = useDispatch();
-  
+
   const setTokenAccess = () => {
     const params = getParam();
     if (params.access_token) {
       dispatch(setToken(params));
-    } 
+    }
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     // const checkForTokenAccess = () => {
     //   dispatch(isAuth());
     // }
     // checkForTokenAccess();
     // if (!auth) {
-      setTokenAccess();
+    setTokenAccess();
     // } else {
     //   setTokenAccess();
     // }
@@ -32,11 +32,11 @@ const App = () => {
 
   return (
     <div className="App">
-      { 
-        ( auth &&
+      {
+        (auth &&
           <Router>
-            <Home auth={auth}/>
-          </ Router> ) || <SignInPage /> 
+            <Home auth={auth} />
+          </ Router>) || <SignInPage />
       }
     </div>
   );

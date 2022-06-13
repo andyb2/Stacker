@@ -1,6 +1,7 @@
 .recent-container {
     width: 100%;
-    max-width: 700px;
+    /* max-width: 700px; */
+    max-width: 1920px;
 }
 
 .recent-row {
@@ -43,4 +44,18 @@
     flex-direction: column;
     justify-content: center;
     flex-shrink: 4;
+}
+
+@media (max-width: 912px) {
+    .user-profile-name {
+        font-size: 30px;
+    }
+
+    .recent-header {
+        font-size: 30px;
+    }
+
+    .recent-track-name {
+        font-size: 14px;
+    }
 }

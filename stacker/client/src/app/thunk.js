@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
 import { getParam } from "../utils";
 import { getUser, getFollowing, getRecent, getTopArtist, getTopSongs, getPlaylist } from "./reducer/spotify";
-import { user, following } from "../endpointResponses";
+// import { user, following } from "../endpointResponses";
 
 const { access_token } = getParam();
 
