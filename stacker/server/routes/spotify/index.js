@@ -27,7 +27,7 @@ router.get('/login', (req, res) => {
     }));
 });
 
-router.get('/callback', function (req, res) {
+router.get('/callback', (req, res) => {
   const code = req.query.code || null;
   const state = req.query.state || null;
   const storedState = req.cookies ? req.cookies[stateKey] : null;
@@ -58,17 +58,6 @@ router.get('/callback', function (req, res) {
         const access_token = body.access_token,
           refresh_token = body.refresh_token;
 
-        // const options = {
-        //   url: 'https://api.spotify.com/v1/me',
-        //   headers: { 'Authorization': 'Bearer ' + access_token },
-        //   json: true
-        // };
-
-        // use the access token to access the Spotify Web API
-        // request.get(options, (error, response, body) => {
-        // });
-
-        // we can also pass the token to the browser to make requests from there
         res.redirect('http://localhost:3000/#' +
           querystring.stringify({
             access_token: access_token,
@@ -82,6 +71,31 @@ router.get('/callback', function (req, res) {
       }
     });
   }
+});
+
+router.get('/refresh_token', (req, res) => {
+
+  const refresh_token = req.query.refresh_token;
+  const authOptions = {
+    url: 'https://accounts.spotify.com/api/token',
+    headers: {
+      'Authorization': 'Basic ' + (new Buffer.from(process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET).toString('base64'))
+    },
+    form: {
+      grant_type: 'refresh_token',
+      refresh_token: refresh_token
+    },
+    json: true
+  };
+
+  request.post(authOptions, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+      var access_token = body.access_token;
+      res.send({
+        'access_token': access_token
+      });
+    }
+  });
 });
 
 module.exports = router

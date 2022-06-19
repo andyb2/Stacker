@@ -11,18 +11,25 @@ import { userDataRequest,
          getRecentlyPlayed,
          getUserTopArtists,
          getUserTopSongs, 
-         getUserPlaylists } from "../app/thunk";
+         getUserPlaylists,
+        bulkSpotifyCall } from "../app/thunk";
+import { setLocalStorageObject } from '../app/reducer/spotify';
 import { setDimension } from "../app/reducer/viewport";
 import { Routes, Route, useLocation } from "react-router-dom";
 import UsersTopSongs from "../components/UsersTopSongs";
 import Playlist from "../components/Playlist";
 import RecentlyPLayed from "../components/RecentlyPlayed";
+import ViewPortWidth from "../components/ViewPortWidth";
+import { useState } from "react";
 
-const Home = ({ auth }) => {
+const Home = () => {
+    const auth = useSelector((state) => state.token.active);
+    const spotify = useSelector(state => state.spotify)
+    const [completed, setCompleted] = useState(false)
     const dispatch = useDispatch();
     const { pathname } = useLocation();
+    const viewPort = useSelector((state) =>state.dimension)
     const main = useRef();
-    const viewPort = useSelector((state) => state.dimension)
 
     useEffect(() => {
         const getUsersData = () => {
@@ -32,39 +39,43 @@ const Home = ({ auth }) => {
             dispatch(getUserTopArtists());
             dispatch(getUserTopSongs());
             dispatch(getUserPlaylists());
+            // dispatch(bulkSpotifyCall());
+            dispatch(setDimension(window.innerWidth));
         }
         getUsersData();
+        setCompleted(true)
+
     }, [auth]);
+
+    useEffect(() => {
+        const currentTime = Date.now();
+        const spotifyData = {
+            spotify,
+            timeStamp: currentTime,
+        }
+        localStorage.setItem('spotify_data', JSON.stringify(spotifyData));
+    }, [completed])
 
     useEffect(() => {
         main.current.scrollTo(0, 0)
     }, [pathname]);
-
-      
-    useEffect(() => {
-        const getWidthOfViewPort = () => {
-            dispatch(setDimension(window.innerWidth));
-        }
-        window.addEventListener('resize', getWidthOfViewPort);
-        return(() => {
-            window.removeEventListener('resize', getWidthOfViewPort);
-        })
-    }, [viewPort]);
-
+  
     return (
         <div className="home-grid">
+            <ViewPortWidth />
             <Sidebar />
                 <div className='main' ref={main}>
                         <Routes>
                             <Route exact path="/" element={
                                 <>
-                                    <User />
-                                    { viewPort.dimension > 696 ?
-                                    <div style={{display: 'flex', width: '100%', gap: '1rem', justifyContent: 'center'}}>
-                                        <RecentlyPlayed /> 
-                                        <UsersTopArtist /> 
-                                    </div>
-                                    : <RecentlyPlayed />
+                                <User />
+                                    {
+                                        viewPort.dimension > 696 ?
+                                            <div style={{display: 'flex', width: '100%', gap: '1rem', justifyContent: 'center'}}>
+                                                <RecentlyPlayed /> 
+                                                <UsersTopArtist /> 
+                                            </div>
+                                            : <RecentlyPlayed />
                                     }
                                 </>
                             }/>

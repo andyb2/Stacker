@@ -10,17 +10,12 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
 }
-
+.playlist-header {
+    padding: 0 0 0 1rem;
+}
 .playlist-image {
     height: var(--height-150);
     width: var(--height-150);
-}
-
-@media (max-width: 912px) {
-    .playlist-image {
-        height: var(--height-125);
-        width: var(--height-125);
-    }
 }
 
 .playlist-card {
@@ -28,7 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
     gap: 1rem;
 }
 
@@ -36,5 +31,34 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%;
+    width: 150px;
+}
+
+@media (max-width: 912px) {
+    .playlist-main {
+        gap: 1rem;
+    }
+
+    .playlist-image {
+        height: var(--height-125);
+        width: var(--height-125);
+    }
+
+    .playlist-name {
+        width: 125px;
+    }
+}
+
+@media (max-width: 347px) {
+    .playlist-header {
+        font-size: 30px;
+        padding: 0;
+    }
+    .playlist-main {
+        grid-template-columns: repeat(auto-fit, minmax(111px, 1fr));
+        /* gap: 1rem; */
+    } 
+    .playlist-name {
+        font-size: 13px;
+    }
 }

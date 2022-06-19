@@ -4,7 +4,7 @@ import PlaylistImage from "./PlaylistImage";
 
 const Playlist = () => {
     const playlists = useSelector((state) => state.spotify.playlists);
-    console.log(playlists)
+
     return (
         <div className='playlist-container'>
             <h1 className='spotify-color-white playlist-header'>Playlists</h1>

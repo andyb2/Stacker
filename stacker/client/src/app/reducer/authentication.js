@@ -6,18 +6,24 @@ export const tokenSlice = createSlice({
     name: 'token',
     initialState,
     reducers: {
-        setToken: ( state, action ) => {
-            localStorage.setItem('spotify_token', action.payload);
-            state.active = true;
+        setToken: (state, action) => {
+            // const tokenTimestamp = Date.now()
+            // const access = {
+            //     timeStamp: tokenTimestamp,
+            //     token: action.payload
+            // }
+            // localStorage.setItem('spotify_token', JSON.stringify(access));
+            localStorage.setItem('spotify_token', JSON.stringify(action.payload));
+            state.active = true
         },
-        isAuth: ( state, action ) => {
+        isAuth: (state, action) => {
             const token = localStorage.getItem('spotify_token');
             token ? state.active = true : state.active = false;
         },
-        logout: ( state, action ) => {
+        logout: (state, action) => {
             localStorage.removeItem('spotify_token');
             state.active = false;
-        }
+        },
     }
 });
 

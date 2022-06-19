@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import ProfileImage from "./ProfileImage";
 import './styles/Following.css';
 const Following = () => {
-    const artists = useSelector((state) => state.spotify.following.artists);
+    const artists = useSelector((state) => state.spotify.data.following.artists);
 
     return (
         <div className="following-container">

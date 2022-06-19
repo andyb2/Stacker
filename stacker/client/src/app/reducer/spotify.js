@@ -26,10 +26,21 @@ export const spotifySlice = createSlice({
         },
         getPlaylist: (state, action) => {
             state.playlists = action.payload;
-        }
+        },
+        // setLocalStorageObject: (state, action) => {
+        //     console.log(action.payload)
+        //     // localStorage.setItem('spotify_data', JSON.stringify(action.payload));
+        //     state.data = action.payload;
+        //     // const spotifyData = {}
+
+        //     // for (const items in state.spotify) {
+        //     //     spotifyData[items] = state.spotify[items]
+        //     // }
+        //     // localStorage.setItem('spotify_data', JSON.stringify(spotifyData));
+        // }
     }
 });
 
 export const { actions } = spotifySlice;
-export const { getUser, getFollowing, getFollowers, getRecent, getTopArtist, getTopSongs, getPlaylist } = actions;
+export const { getUser, getFollowing, getFollowers, getRecent, getTopArtist, getTopSongs, getPlaylist, setLocalStorageObject } = actions;
 export default spotifySlice.reducer;

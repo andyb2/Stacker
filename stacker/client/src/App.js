@@ -9,33 +9,44 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 const App = () => {
   const auth = useSelector((state) => state.token.active);
+  console.log(auth)
   const dispatch = useDispatch();
 
   const setTokenAccess = () => {
     const params = getParam();
+
     if (params.access_token) {
       dispatch(setToken(params));
     }
   }
 
   useEffect(() => {
-    // const checkForTokenAccess = () => {
-    //   dispatch(isAuth());
-    // }
-    // checkForTokenAccess();
-    // if (!auth) {
-    setTokenAccess();
-    // } else {
-    //   setTokenAccess();
-    // }
+    const checkLocalStorageForToken = () => {
+      dispatch(isAuth())
+    }
+    checkLocalStorageForToken();
+    if (!auth) {
+      console.log(`hit`)
+      setTokenAccess();
+
+    }
   }, [])
+
+  // const confirmAuth = () => {
+  //   const { access_token } = JSON.parse(localStorage.getItem('spotify_token'));
+  //   const params = getParam();
+  //   console.log(params)
+  //   if (access_token === params.access_token) {
+  //     dispatch(isAuth(true));
+  //   }
+  // }
 
   return (
     <div className="App">
       {
         (auth &&
           <Router>
-            <Home auth={auth} />
+            <Home />
           </ Router>) || <SignInPage />
       }
     </div>

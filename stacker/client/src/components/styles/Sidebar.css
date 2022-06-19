@@ -86,3 +86,9 @@
         background-color: transparent;
     }
 }
+
+@media (max-width: 347px) {
+    .sidebar-titles {
+        font-size: 11px;
+    }
+}

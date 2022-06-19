@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 100%;
     max-width: 1920px;
-    color: white;
 }
 
 .songs-main {
@@ -22,17 +21,9 @@
 
 .song-block {
     display: flex;
+    /* justify-content: center; */
+    align-items: center;
     gap: 1rem;
-}
-
-.header-rank {
-    font-size: 100px;
-    margin: 0;
-    color: #1DB954;
-}
-
-.songs-ranked-image {
-    height: 100px;
 }
 
 .songs-image {
@@ -46,10 +37,30 @@
     justify-content: flex-start;
 }
 
+.song-name {
+    font-size: 16px;
+}
+
 .song-artist {
     color: grey;
+    font-size: 14px;
 }
 
 .song-time-length {
-    color: grey;
+    display: flex; 
+    align-items: center; 
+    color: #DEDEDE;
+    font-size: 13px;
+}
+
+@media (max-width: 347px) {
+    .song-name {
+        font-size: 14px;
+    }
+    .song-artist {
+        font-size: 13px;
+    }
+    .song-time-length {
+        font-size: 13px;
+    }
 }

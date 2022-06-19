@@ -6,6 +6,7 @@ html, body {
 :root {
     --height-150: 150px;
     --height-125: 125px;
+    --height-100: 100px;
 }
 
 body {
@@ -56,7 +57,7 @@ a {
     gap: 2rem;
     overflow-y: overlay;
 }
-/* 768px */
+
 @media (max-width: 912px) {
     .home-grid {
         grid-template-columns: 1fr 1fr;
