@@ -73,9 +73,8 @@ router.get('/callback', (req, res) => {
   }
 });
 
-router.get('/refresh_token', (req, res) => {
-
-  const refresh_token = req.query.refresh_token;
+router.post('/refresh_token', (req, res) => {
+  const refresh_token = req.body.refresh_token;
   const authOptions = {
     url: 'https://accounts.spotify.com/api/token',
     headers: {
@@ -88,9 +87,9 @@ router.get('/refresh_token', (req, res) => {
     json: true
   };
 
-  request.post(authOptions, function (error, response, body) {
+  request.post(authOptions, (error, response, body) => {
     if (!error && response.statusCode === 200) {
-      var access_token = body.access_token;
+      const access_token = body.access_token;
       res.send({
         'access_token': access_token
       });

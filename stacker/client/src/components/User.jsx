@@ -6,8 +6,7 @@ import ProfileImage from "./ProfileImage";
 
 const User = () => {
     const { user, following }  = useSelector((state) => state.spotify);
-    // const following = useSelector((state) => state.spotify.data.following)
-    console.log(`yesuhsu`, user)
+
     return (
         <>
             {   
