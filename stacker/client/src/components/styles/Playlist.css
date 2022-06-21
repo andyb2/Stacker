@@ -34,7 +34,7 @@
     width: 150px;
 }
 
-@media (max-width: 912px) {
+@media (max-width: 925px) {
     .playlist-main {
         gap: 1rem;
     }

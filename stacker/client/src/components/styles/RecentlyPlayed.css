@@ -43,10 +43,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-shrink: 4;
 }
 
-@media (max-width: 912px) {
+@media (max-width: 925px) {
     .user-profile-name {
         font-size: 30px;
     }
@@ -54,8 +53,13 @@
     .recent-header {
         font-size: 30px;
     }
+}
 
-    /* .recent-track-name {
+@media (max-width: 347px) {
+    .recent-track-name {
         font-size: 14px;
-    } */
+    }
+    .recent-track-artist {
+        font-size: 13px;
+    }
 }

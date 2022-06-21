@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
-import { logout } from '../app/reducer/authentication'
+import { NavLink } from "react-router-dom";
+import { logout } from '../app/reducer/authentication';
 const Logout = () => {
     const dispatch = useDispatch();
 
@@ -9,7 +10,9 @@ const Logout = () => {
 
     return (
         <>
-            <button onClick={() => handeLogout()}>Logout</button>
+            <NavLink to='/'>
+                <button onClick={() => handeLogout()}>Logout</button>
+            </NavLink>
         </>
     )
 }

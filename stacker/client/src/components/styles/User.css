@@ -40,7 +40,7 @@
     margin-top: 1rem;
 }
 
-@media (max-width: 912px) {
+@media (max-width: 925px) {
     .user-profile-name {
         font-size: 30px;
     }

@@ -21,7 +21,6 @@
 
 .song-block {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     gap: 1rem;
 }
@@ -58,9 +57,6 @@
         font-size: 14px;
     }
     .song-artist {
-        font-size: 13px;
-    }
-    .song-time-length {
         font-size: 13px;
     }
 }
