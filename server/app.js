@@ -3,7 +3,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const { join } = require('path');
 const cors = require('cors')
-const PORT = process.env.port || 8888;
+const PORT = process.env.PORT || 8888;
 const app = express();
 
 app.use(cors());
