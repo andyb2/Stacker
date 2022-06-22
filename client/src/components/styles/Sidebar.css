@@ -8,10 +8,13 @@
     grid-area: sidebar;
 }
 
+.nav-spotify-logo {
+    cursor: pointer;
+}
+
 .sidebar-spotify-logo {
     display: flex;
     justify-content: center;
-    cursor: pointer;
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;

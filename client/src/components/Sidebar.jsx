@@ -24,7 +24,9 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className='sidebar-spotify-logo'>
-                <SpotifyLogo />
+                <NavLink to='/'>
+                    <SpotifyLogo />
+                </NavLink>
             </div>
             <div className='nav-buttons'>
                 <NavLink to='/' className={({ isActive }) => `${isActive && screenSize > 925 ? 'nav-active' : 'nav-style'}`}>
