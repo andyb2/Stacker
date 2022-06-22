@@ -41,6 +41,9 @@
 }
 
 @media (max-width: 925px) {
+    .user-main {
+        padding-top: 0.5rem;
+    }
     .user-profile-name {
         font-size: 30px;
     }

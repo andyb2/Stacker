@@ -45,12 +45,6 @@ const Sidebar = () => {
                         <p className='sidebar-titles'>{`${screenSize < 400 ? `Songs` : `Top Songs`}`}</p>
                     </div>
                 </NavLink>
-                <NavLink to='/recent' className={({ isActive }) => `${isActive && screenSize > 925 ? 'nav-active' : 'nav-style'}`}>
-                    <div className='icon-holder'>
-                        <FontAwesomeIcon icon={faClockRotateLeft} size={`${screenSize < 341 ? `lg` : `xl`}`} color={'grey'} />
-                        <p className='sidebar-titles'>Recent</p>
-                    </div>
-                </NavLink>
                 <NavLink to="/playlists" className={({ isActive }) => `${isActive && screenSize > 925 ? 'nav-active' : 'nav-style'}`}>
                     <div className='icon-holder'>
                         <FontAwesomeIcon icon={faBarsStaggered} size={`${screenSize < 341 ? `lg` : `xl`}`} color={'grey'} />

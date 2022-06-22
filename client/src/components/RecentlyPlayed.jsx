@@ -8,6 +8,7 @@ const RecentlyPLayed = () => {
     return (
         <div className='recent-container'>
             <h1 className='spotify-color-white recent-header'>Recently Played</h1>
+            <div className='recent-main'>
             { recent && 
                 recent.items.map(({ track }, idx) => {
                     return (
@@ -28,6 +29,7 @@ const RecentlyPLayed = () => {
                     )
                 })
             }
+            </div>
         </div>
     )
 }

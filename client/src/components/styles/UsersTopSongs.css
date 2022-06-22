@@ -5,10 +5,16 @@
     max-width: 1920px;
 }
 
+.header-top-songs {
+    /* margin-left: 1rem; */
+    padding-bottom: 1rem;
+}
+
 .songs-main {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    margin-top: 1rem;
+    /* padding: 1rem 1rem 1rem 1rem; */
 }
 
 .song-row {
@@ -52,7 +58,19 @@
     font-size: 13px;
 }
 
+@media (max-width: 925px) {
+    .header-top-songs {
+        padding: 1rem 0 0 1rem;
+    }
+    .songs-main {
+        padding: 0 1rem 0 1rem;
+    }
+}
+
 @media (max-width: 347px) {
+    .header-top-songs {
+        font-size: 30px;
+    }
     .song-name {
         font-size: 14px;
     }

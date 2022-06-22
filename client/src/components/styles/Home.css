@@ -18,6 +18,7 @@ body {
 }
 
 h1 {
+    margin: 0;
     color: white;
 }
 
@@ -60,13 +61,18 @@ a {
 }
 
 @media (max-width: 925px) {
-    .home-grid {
+    /* .home-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: calc(100vh - 80px) 80px;
         grid-template-areas: 'main main'
                              'sidebar sidebar';
+    } */
+    .home-grid {
+        grid-template-columns: 100vw;
+        grid-template-rows: calc(100vh - 80px);
+        grid-template-areas: 'main main';
     }
     .main {
-        padding: 0.5rem;
+        padding: 0 0.5rem 0 0.5rem;
     }
 }

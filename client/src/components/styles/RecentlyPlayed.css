@@ -1,7 +1,16 @@
 .recent-container {
     width: 100%;
-    /* max-width: 700px; */
     max-width: 1920px;
+}
+
+.recent-header {
+    padding: 1rem 0 0 1rem;
+    font-size: 32px;
+}
+
+.recent-main {
+    margin-top: 1rem;
+    padding: 0 1rem 0 1rem;
 }
 
 .recent-row {
@@ -29,7 +38,6 @@
 .recent-song-duration {
     display: flex; 
     align-items: center; 
-    padding-right: 0.5rem;
     color: #DEDEDE;
     font-size: 13px;
 }
@@ -56,6 +64,9 @@
 }
 
 @media (max-width: 347px) {
+    .recent-header {
+        font-size: 30px;
+    }
     .recent-track-name {
         font-size: 14px;
     }

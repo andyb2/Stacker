@@ -1,8 +1,12 @@
 import spotify from '../logos/spotify.png'
 import './styles/SignInPage.css'
+
+const LOGIN = 
+    process.env.NODE_ENV !== 'production' 
+        ? 'http://localhost:8888/spotify/login' 
+        : 'https://spotify-user.herokuapp.com/spotify/login';
+
 const SignInPage = () => {
-    const LOGIN = 'https://spotify-user.herokuapp.com/spotify/login';
-    
     return (
         <div className='sign-in'>
             <div className='spotify-login'>

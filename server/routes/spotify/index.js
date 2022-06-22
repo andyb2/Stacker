@@ -8,7 +8,7 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 let REDIRECT_URI = process.env.REDIRECT_URI || 'http://localhost:8888/spotify/callback';
 let URI = process.env.URI || 'http://localhost:3000';
-
+console.log(process.env.CLIENT_ID)
 if (process.env.NODE_ENV !== 'production') {
   REDIRECT_URI = 'http://localhost:8888/spotify/callback';
   URI = 'http://localhost:3000';
@@ -23,6 +23,7 @@ const generateRandomString = (length) => {
   return string
 }
 router.get('/login', (req, res) => {
+  console.log(process.env.CLIENT_SECRET)
   const state = generateRandomString(16);
   res.cookie(stateKey, state);
   res.redirect('https://accounts.spotify.com/authorize?' +
