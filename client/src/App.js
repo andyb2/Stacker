@@ -30,7 +30,7 @@ const App = () => {
     if (!auth) {
       setTokenAccess();
     }
-  }, [])
+  }, [auth])
 
   return (
     <div className="App">
