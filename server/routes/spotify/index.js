@@ -23,6 +23,7 @@ const generateRandomString = (length) => {
   return string
 }
 router.get('/login', (req, res) => {
+  console.log(`server has gettttted`)
   const state = generateRandomString(16);
   res.cookie(stateKey, state);
   res.redirect('https://accounts.spotify.com/authorize?' +
