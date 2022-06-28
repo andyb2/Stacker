@@ -3,7 +3,8 @@ import ProfileImage from "./ProfileImage";
 import './styles/Following.css';
 const Following = () => {
     const artists = useSelector((state) => state.spotify.following.artists);
-
+    const viewPort = useSelector((state) => state.dimension)
+    console.log(viewPort)
     return (
         <div className="following-container">
             <h1 className='following-header'>Following</h1>
@@ -16,10 +17,10 @@ const Following = () => {
                                     { 
                                         images.length 
                                             ? <img src={`${images[0].url}`} className='following-image' alt='artists profile' /> 
-                                            : <ProfileImage className='following-image' username={name} br={'2px'} h={'150px'} />
+                                            : <ProfileImage username={name} br={'2px'} h={'150px'}/>
                                     }
                                     <div className='following-name'>{name}</div>
-                                    <div>{`followers ${followers.total}`}</div>
+                                    <div className='following-name'>{`followers ${followers.total}`}</div>
                                 </a>
                             </div>
                         )

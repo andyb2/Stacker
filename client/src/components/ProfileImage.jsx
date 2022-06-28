@@ -12,6 +12,7 @@ const backgroundColor = {
 
 const ProfileImage = ({ username, br, h, f }) => {
     const [ imageProperties, setImageProperties ] = useState({});
+    console.log(h)
     const style = {
         display: 'flex',
         justifyContent: 'center',
