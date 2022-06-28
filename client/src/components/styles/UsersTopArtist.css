@@ -7,14 +7,13 @@
 
 .artist-main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) ;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
     padding: 1rem;
 }
 
 .header-top-artist {
-    /* margin-bottom: 1rem; */
-    padding: 1rem 0 0 1rem
+    padding: 1rem 0 0 1rem;
 }
 
 .artist-card {
@@ -22,7 +21,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 1rem 1rem 1rem 1rem; */
 }
 
 .artist-card:hover {
@@ -47,11 +45,7 @@
     .artist-main {
         grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)) ;
         gap: 1rem;
-        /* padding: 1rem 0 0 1rem */
     }
-    /* .header-top-artist {
-        margin: 1rem 0 0 1rem;
-    } */
     .artist-image {
         width: var(--height-125);
         height: var(--height-125);
