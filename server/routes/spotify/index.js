@@ -2,7 +2,7 @@ const router = require('express').Router();
 const querystring = require('node:querystring');
 const request = require('request');
 const stateKey = 'spotify_auth_state';
-const scopes = 'user-read-private user-read-email user-read-recently-played user-top-read user-follow-read user-follow-modify playlist-read-private playlist-read-collaborative playlist-modify-public'
+const scopes = 'user-read-private user-read-email user-read-recently-played user-top-read user-follow-read playlist-read-private playlist-read-collaborative';
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
