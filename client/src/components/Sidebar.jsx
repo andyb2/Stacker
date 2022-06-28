@@ -5,7 +5,6 @@ import SpotifyLogo from '../logos/spotify-logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic,
          faMicrophoneLines,
-         faClockRotateLeft, 
          faUser, 
          faBarsStaggered,
         faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +13,6 @@ import { logout } from '../app/reducer/authentication';
 const Sidebar = () => {
     const viewPortWidth = useSelector((state) => state.dimension );
     const screenSize = viewPortWidth.dimension
-
     const dispatch = useDispatch();
 
     const handeLogout = () => {
@@ -24,7 +22,7 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className='sidebar-spotify-logo'>
-                <NavLink to='/'>
+                <NavLink to='/' className='nav-spotify-logo'>
                     <SpotifyLogo />
                 </NavLink>
             </div>
