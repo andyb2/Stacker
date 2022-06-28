@@ -6,21 +6,26 @@ const Following = () => {
 
     return (
         <div className="following-container">
-            { artists
-                 && artists.items.map(({ name, images, followers }, idx) => {
-                    return (
-                        <div className='spotify-color-white' key={`${name} ${idx}`}>
-                            { 
-                                images.length 
-                                    ? <img src={`${images[0].url}`} alt='artists profile' style={{height: '150px'}} /> 
-                                    : <ProfileImage username={name} br={'2px'} h={'150px'} />
-                            }
-                            <div>{name}</div>
-                            <div>{`followers ${followers.total}`}</div>
-                        </div>
-                    )
-                })
-            }
+            <h1 className='following-header'>Following</h1>
+            <div className="following-main">
+                { artists
+                    && artists.items.map(({ name, images, followers, external_urls }, idx) => {
+                        return (
+                            <div className='spotify-color-white following-card' key={`${name} ${idx}`}>
+                                <a href={external_urls.spotify} target="_blank" rel="noreferrer">
+                                    { 
+                                        images.length 
+                                            ? <img src={`${images[0].url}`} className='following-image' alt='artists profile' /> 
+                                            : <ProfileImage className='following-image' username={name} br={'2px'} h={'150px'} />
+                                    }
+                                    <div className='following-name'>{name}</div>
+                                    <div>{`followers ${followers.total}`}</div>
+                                </a>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 
