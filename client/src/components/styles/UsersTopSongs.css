@@ -1,80 +1,82 @@
 .songs-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1920px;
 }
 
 .header-top-songs {
-    /* margin-left: 1rem; */
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .songs-main {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    /* padding: 1rem 1rem 1rem 1rem; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
 .song-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.song-row:hover {
+  background-color: rgb(38, 38, 38);
 }
 
 .song-block {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .songs-image {
-    height: 50px;
-    width: 50px;
+  height: 50px;
+  width: 50px;
 }
 
 .song-info {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .song-name {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .song-artist {
-    color: grey;
-    font-size: 14px;
+  color: grey;
+  font-size: 14px;
 }
 
 .song-time-length {
-    display: flex; 
-    align-items: center; 
-    color: #DEDEDE;
-    font-size: 13px;
+  display: flex;
+  align-items: center;
+  color: #dedede;
+  font-size: 13px;
 }
 
 @media (max-width: 925px) {
-    .header-top-songs {
-        padding: 1rem 0 0 1rem;
-    }
-    .songs-main {
-        padding: 0 1rem 0 1rem;
-    }
+  .header-top-songs {
+    padding: 1rem 0 0 1rem;
+  }
+  .songs-main {
+    padding: 0 1rem 0 1rem;
+  }
 }
 
 @media (max-width: 347px) {
-    .header-top-songs {
-        font-size: 30px;
-    }
-    .song-name {
-        font-size: 14px;
-    }
-    .song-artist {
-        font-size: 13px;
-    }
+  .header-top-songs {
+    font-size: 30px;
+  }
+  .song-name {
+    font-size: 14px;
+  }
+  .song-artist {
+    font-size: 13px;
+  }
 }

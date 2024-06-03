@@ -1,77 +1,77 @@
 .top-artist-conatiner {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1920px;
 }
 
 .artist-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
 }
 
 .header-top-artist {
-    padding: 1rem 0 0 1rem;
+  padding: 1rem 0 0 1rem;
 }
 
 .artist-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .artist-card:hover {
-    border-radius: 2px;
-    background-color: rgb(38, 38, 38);
+  border-radius: 2px;
+  background-color: rgb(38, 38, 38);
 }
 
 .artist-image {
-    height: 150px;
-    margin-bottom: 1rem;
-    border-radius: 2px;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 1rem;
+  border-radius: 2px;
 }
 
 .artist-name {
-    width: 150px;
-    display: flex;
-    align-items: flex-start;
-    color: rgb(222, 222, 222);
+  width: 150px;
+  display: flex;
+  align-items: flex-start;
+  color: rgb(222, 222, 222);
 }
 
 @media (max-width: 925px) {
-    .artist-main {
-        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)) ;
-        gap: 1rem;
-    }
-    .artist-image {
-        width: var(--height-125);
-        height: var(--height-125);
-    }
-    .artist-name {
-        width: var(--hieght-125);
-        font-size: 14px;
-    }
-
+  .artist-main {
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    gap: 1rem;
+  }
+  .artist-image {
+    width: var(--height-125);
+    height: var(--height-125);
+  }
+  .artist-name {
+    width: var(--hieght-125);
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 347px) {
-    .artist-main {
-        grid-template-columns: repeat(auto-fit, minmax(111px, 1fr));
-    } 
-    .artist-name {
-        font-size: 13px;
-    }
-    .header-top-artist {
-        font-size: 30px;
-    } 
+  .artist-main {
+    grid-template-columns: repeat(auto-fit, minmax(111px, 1fr));
+  }
+  .artist-name {
+    font-size: 13px;
+  }
+  .header-top-artist {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 262px) {
-    .top-artist-conatiner {
-        justify-content: center;
-        align-items: center;
-    }
+  .top-artist-conatiner {
+    justify-content: center;
+    align-items: center;
+  }
 }
